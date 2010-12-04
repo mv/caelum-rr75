@@ -21,6 +21,14 @@ group :development, :test do
   gem 'factory_girl'
   gem 'shoulda'
 
+  gem 'rspec-rails'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'spork'
+  gem 'database_cleaner'
+
 end
 
 # vim:ft=ruby:
