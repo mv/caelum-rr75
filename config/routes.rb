@@ -1,4 +1,10 @@
 LojaDeCarros::Application.routes.draw do
+
+  # root :controller => "carros", :action => "index"
+  #
+  root :to => "carros#index"
+  resources "carros"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
