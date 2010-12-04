@@ -1,39 +1,47 @@
-# MySQL.  Versions 4.1 and 5.0 are recommended.
+###
+# create database loja_de_carros_development ;
+# create database loja_de_carros_test ;
+# create database loja_de_carros_production ;
 #
-# Install the MySQL driver:
-#   gem install mysql2
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+# grant all on loja_de_carros_development.* to loja@'localhost' identified by 'loja';
+# grant all on loja_de_carros_test.*        to loja@'localhost' identified by 'loja';
+# grant all on loja_de_carros_production.*  to loja@'localhost' identified by 'loja';
+# grant all on loja_de_carros_development.* to loja@'localhost' identified by 'loja';
+# grant all on loja_de_carros_test.*        to loja@'localhost' identified by 'loja';
+# grant all on loja_de_carros_production.*  to loja@'localhost' identified by 'loja';
+# flush privileges;
+###
+
 development:
   adapter: mysql2
+  host: localhost
+  database: loja_de_carros_development
+  username: loja
+  password: loja
+  pool: 5
   encoding: utf8
   reconnect: false
-  database: loja_de_carros_development
-  pool: 5
-  username: root
-  password:
-  host: localhost
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+
 test:
   adapter: mysql2
+  host: localhost
+  database: loja_de_carros_test
+  username: loja
+  password: loja
+  pool: 5
   encoding: utf8
   reconnect: false
-  database: loja_de_carros_test
-  pool: 5
-  username: root
-  password:
-  host: localhost
+
 
 production:
   adapter: mysql2
+  host: localhost
+  database: loja_de_carros_production
+  username: loja
+  password: loja
+  pool: 5
   encoding: utf8
   reconnect: false
-  database: loja_de_carros_production
-  pool: 5
-  username: root
-  password:
-  host: localhost
+
+
