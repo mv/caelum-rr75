@@ -23,17 +23,6 @@ development:
   reconnect: false
 
 
-test:
-  adapter: mysql2
-  host: localhost
-  database: loja_de_carros_test
-  username: loja
-  password: loja
-  pool: 5
-  encoding: utf8
-  reconnect: false
-
-
 production:
   adapter: mysql2
   host: localhost
@@ -44,4 +33,18 @@ production:
   encoding: utf8
   reconnect: false
 
+
+test: &test
+  adapter: mysql2
+  host: localhost
+  database: loja_de_carros_test
+  username: loja
+  password: loja
+  pool: 5
+  encoding: utf8
+  reconnect: false
+
+
+cucumber:
+  <<: *test
 
