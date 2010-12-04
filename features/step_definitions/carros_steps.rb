@@ -1,18 +1,18 @@
 
 Dado /^que estou na pagina inicial$/ do
-  pending # express the regexp above with the code you wish you had
+  visit "/"
 end
 
-Dado /^preencho o campo "([^"]*)" com "([^"]*)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+Dado /^preencho o campo "([^"]*)" com "([^"]*)"$/ do |campo, valor|
+  fill_in(campo, :with => valor)
 end
 
-Dado /^aperto o botao "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Dado /^aperto o botao "([^"]*)"$/ do |botao|
+  click_button(botao)
 end
 
-Entao /^eu deveria ver "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Entao /^eu deveria ver "([^"]*)"$/ do |texto|
+  page.should have_content(texto)
 end
 
 
