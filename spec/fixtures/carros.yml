@@ -1,0 +1,19 @@
+###
+### Entradas de teste
+###
+
+monza:
+  nome: Monza
+  descricao: Monza vermelho 92
+  preco: 12_000
+
+fusca:
+  nome: Fusca
+  descricao: fusca gelo 87
+  preco: 9_000
+
+tempra:
+  nome: Tempra
+  descricao: Tempra roxo 98
+  preco: 19_000
+
