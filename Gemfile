@@ -13,6 +13,9 @@ gem 'will_paginate'    , '~> 2.3'
 ### Indexing
 gem 'thinking-sphinx'  , '~> 2.0.0.rc2', :require => 'thinking_sphinx'
 
+### Extras
+gem 'restfulie'        , '~> 0.9.3'
+
 ### dev,qa
 group :development, :test do
 
