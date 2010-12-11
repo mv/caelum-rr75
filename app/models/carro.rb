@@ -1,5 +1,9 @@
 class Carro < ActiveRecord::Base
 
+  def novo?
+    true
+  end
+
   # Sphinx
   define_index do
     indexes nome, :sortable => true

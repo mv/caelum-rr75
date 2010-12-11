@@ -23,6 +23,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'shoulda'
 
+# gem 'rspec-helper'
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'cucumber-rails'
