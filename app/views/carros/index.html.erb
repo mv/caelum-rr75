@@ -7,11 +7,11 @@
       <br/><br/>
 
       <%= f.label :nome %><br/>
-      <%= f.text_area :nome, :class => 'button-input' %>
+      <%= f.text_area :nome, :class => 'button-input', :cols => 40, :rows => 1 %>
       <br/>
 
       <%= f.label :descricao %><br/>
-      <%= f.text_area :descricao, :cols => 26, :rows => 9 %>
+      <%= f.text_area :descricao, :cols => 40, :rows => 3 %>
       <br/>
 
       <%= f.label :preco %><br/>
@@ -19,6 +19,7 @@
       <br/><br/>
 
       <%= f.submit "Anunciar!", :disable_with => '...' , :class => 'anunciar' %>
+      <br/>
 
     <% end -%>
 
