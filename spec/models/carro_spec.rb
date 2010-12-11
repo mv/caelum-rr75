@@ -1,5 +1,8 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Carro do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "deveria ser novo" do
+    Carro.new.should be_novo
+  end
 end
+
