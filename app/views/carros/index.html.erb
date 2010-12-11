@@ -31,6 +31,12 @@
   <strong>Carros `a venda</strong>
   <br/>
 
+  <br/><br/>
+  <%= form_tag :controller => 'carros', :action => 'busca' do %>
+    <%= text_field_tag 'query', nil, :class => 'button-search' %>
+    <%= submit_tag "Buscar", :disable_with => '...', :class => 'buscar' %>
+  <% end %>
+
   <% if !@carros.blank? %>
 
     <% for carro in @carros %>

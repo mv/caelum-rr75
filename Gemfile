@@ -10,6 +10,8 @@ gem 'nifty-generators' , '~> 0.4'
 gem 'haml'             , '~> 3.0'
 gem 'will_paginate'    , '~> 2.3'
 
+### Indexing
+gem 'thinking-sphinx'  , '~> 2.0.0.rc2', :require => 'thinking_sphinx'
 
 ### dev,qa
 group :development, :test do
