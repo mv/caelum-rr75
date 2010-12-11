@@ -1,5 +1,7 @@
 class CarrosController < ApplicationController
 
+  respond_to :rss, :only => :feed
+
   def index
     @carro = Carro.new
     @carros = Carro.all
@@ -12,6 +14,7 @@ class CarrosController < ApplicationController
     redirect_to :action => "index"
   end
 
+  ## Sphinx
   def busca
     @query = params[:query]
       @carro = Carro.new
@@ -22,4 +25,11 @@ class CarrosController < ApplicationController
       render :action => 'index'
   end
 
+  ## RSS feed
+  def feed
+    @carros = Carro.limit(30).all
+    respond_with @carros
+  end
+
 end
+

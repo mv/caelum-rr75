@@ -18,7 +18,7 @@ Funcionalidade: Carros
         E aperto o botao "Anunciar!"
         Entao eu deveria ver "Muito bom estado."
 #       Entao show me the page
-#       E eu deveria ver "Muito bom estado"
+#       E eu deveria ver "Muito bom estado."
 
     Cenario: Busca
         Dado que os seguintes carros existem:
@@ -28,4 +28,29 @@ Funcionalidade: Carros
         E aperto o botao "Buscar"
         Entao eu deveria ver "vectra"
 #       Entao show me the page
+
+    Cenario: Feeds
+        Dado que os seguintes carros existem:
+            | nome   | descricao        | preco |
+            | vectra | vendo meu vectra | 32000 |
+        E que estou na pagina inicial
+        E clico no link "RSS"
+        Entao o rss deve ser:
+#       Entao show me the page
+
+# rss[version="2.0"]>channel>title+link+description+language+item>title+description
+"""
+<rss version="2.0">
+    <channel>
+        <title>Loja de carros</title>
+        <link>http://localhost:3000/</link>
+        <description>RSS da Loja de Carros</description>
+        <language>pt-br</language>
+        <item>
+            <title>vectra</title>
+            <description>vendo meu vectra</description>
+        </item>
+    </channel>
+</rss>
+"""
 
