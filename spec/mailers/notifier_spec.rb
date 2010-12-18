@@ -14,10 +14,10 @@ describe Notifier do
     end
 
     it "exibe o corpo da mensagem" do
-      mail.body.encoded.shoud match("Novo carro cadastrado")
-      mail.body.encoded.shoud match(carro.nome)
-      mail.body.encoded.shoud match(carro.descricao)
-      mail.body.encoded.shoud match(carro.preco.to_s)
+      mail.body.encoded.should match("Novo carro cadastrado")
+      mail.body.encoded.should match(carro.nome)
+      mail.body.encoded.should match(carro.descricao)
+      mail.body.encoded.should match(carro.preco.to_s)
     end
 
   end # describe

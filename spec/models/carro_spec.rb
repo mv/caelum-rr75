@@ -1,15 +1,35 @@
 require "spec_helper"
 
 describe Carro do
+
+  include CarroSpec
+
+  before do
+    @carro = Carro.new
+  end
+
+  ###
+  ### Exemplos
+  ###
   it "deveria ser novo" do
     Carro.new.should be_novo
   end
+
+  it "deveria ter uma comissao de 5% do valor" do
+    @carro.preco = 32_000
+    @carro.calcula_comissao.should be == 1_600.00
+  end
+
+  it do
+    @carro.should_not be_an_instance_of(Moto)
+  end
+
 end
 
 # mais exemplos
 
 # fixtures :carros
-#
+
 # it "deveria usar fixtures" do
 #   monza = carros(:monza)
 #   monza.nome.should be      == 'Monza'

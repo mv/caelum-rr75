@@ -4,6 +4,10 @@ class Carro < ActiveRecord::Base
     true
   end
 
+  def calcula_comissao
+    preco * 0.05      # 5%
+  end
+
   # Sphinx
   define_index do
     indexes nome, :sortable => true
