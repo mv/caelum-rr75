@@ -60,6 +60,9 @@ if defined?(ActiveRecord::Base)
   end
 end
 
+### Simplecov
+require 'simplecov'
+SimpleCov.start 'rails'
 
 ### Sphinx
 Cucumber::Rails::World.use_transactional_fixtures = false
@@ -70,4 +73,5 @@ Cucumber::ThinkingSphinx::ExternalWorld.new
 Before do
   Carro.destroy_all
 end
+
 

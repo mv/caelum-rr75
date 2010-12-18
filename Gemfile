@@ -26,6 +26,8 @@ group :development, :test do
   gem 'factory_girl'
   gem 'shoulda'
 
+  gem 'simplecov', '>= 0.3.2'
+
 # gem 'rspec-helper'
   gem 'rspec-rails'
   gem 'cucumber'
